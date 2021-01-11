@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto";
 }
@@ -87,6 +88,13 @@ button {
   color: grey;
 }
 
+.steps__choice {
+  transition-duration: 300ms;
+}
+.steps__choice:hover {
+  background-color: #9256dc17;
+}
+
 #operation {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -105,8 +113,13 @@ button {
   flex-direction: column;
   align-items: center;
 }
-.restaurants__restaurant {
-  width: 90%;
+.restaurants__vignettes {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: inherit;
+}
+.restaurants__vignettes__restaurant {
+  width: 100%;
   height: max-content;
   background-color: #fff;
   margin-top: 3%;
@@ -117,14 +130,14 @@ button {
   -moz-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);
 }
-.restaurants__restaurant__image {
+.restaurants__vignettes__restaurant__image {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   width: 100%;
   height: 25vh;
   object-fit: cover;
 }
-.restaurants__restaurant__description {
+.restaurants__vignettes__restaurant__description {
   background-color: #fff;
   display: flex;
   flex-direction: row;
@@ -161,6 +174,19 @@ button {
   font-size: 1.3em;
 }
 
+section .fas {
+  transform: scale(0);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  content: "";
+  position: relative;
+  left: 45px;
+}
+
+.test-111:active > .fas {
+  transform: scale(1);
+}
+
 .new-tag {
   width: max-content;
   padding: 10px;
@@ -170,6 +196,21 @@ button {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+a {
+  color: #3d3d3d;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 500ms;
+}
+button:hover {
+  transform: scale(1.1);
 }
 
 footer {
@@ -281,10 +322,6 @@ main {
   flex-direction: column;
 }
 
-section {
-  margin-top: 40px;
-}
-
 .btn-purchase {
   display: flex;
   flex-direction: column;
@@ -295,6 +332,61 @@ section {
   align-self: center;
 }
 
+.restaurants__restaurant__image {
+  width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 880px) {
+  .steps-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .steps-menu section {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1199px) {
+  .restaurants__vignettes__restaurant {
+    width: 49%;
+    float: left;
+  }
+
+  #restaurant-3 {
+    clear: both;
+  }
+
+  #restaurant-1, #restaurant-3 {
+    margin-right: 2%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .steps {
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .steps__choice {
+    width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .restaurants__vignettes {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 3%;
+  }
+
+  .restaurants__vignettes__restaurant {
+    margin-right: 2%;
+  }
+}
 @font-face {
   font-family: "Roboto";
   src: url("../../fonts/Roboto-Regular.ttf") format("truetype");

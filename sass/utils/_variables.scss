@@ -95,6 +95,13 @@ button{
     color:grey;
 }
 
+.steps__choice {
+    transition-duration: 300ms;
+    &:hover{
+        background-color: #9256dc17;
+    }
+}
+
 #operation{
     padding-top:40px;
     padding-bottom:40px;
@@ -112,32 +119,37 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    &__restaurant{
-        width:90%;
-        height:max-content;
-        background-color: $colour-background-primary;
-        margin-top:3%;
-        margin-bottom:3%;
-        border-radius: 20px;
-        position:relative;
-        -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
-        -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
-        box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
-        &__image{
-            border-top-left-radius: 20px; //ajouter fonction si page accueil
-            border-top-right-radius: 20px; //idem
+    &__vignettes{
+        margin-left:5%;
+        margin-right: 5%;
+        width:inherit;        
+        &__restaurant{
             width:100%;
-            height:25vh; //idem
-            object-fit: cover;
-        }
-        &__description{
+            height:max-content;
             background-color: $colour-background-primary;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding:10px;
-            border-bottom-left-radius:20px;
-            border-bottom-right-radius:20px;
+            margin-top:3%;
+            margin-bottom:3%;
+            border-radius: 20px;
+            position:relative;
+            -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
+            -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
+            box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
+            &__image{
+                border-top-left-radius: 20px; //ajouter fonction si page accueil
+                border-top-right-radius: 20px; //idem
+                width:100%;
+                height:25vh; //idem
+                object-fit: cover;
+            }
+            &__description{
+                background-color: $colour-background-primary;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding:10px;
+                border-bottom-left-radius:20px;
+                border-bottom-right-radius:20px;
+            }
         }
     }
 }
@@ -170,6 +182,25 @@ button{
     padding-top:5px;
     padding-right: 10px;
     font-size: 1.3em;
+    //position: relative;
+    //left:20px;
+}
+
+section .fas {
+    transform: scale(0);
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 800; 
+    content: "\f004";
+    position: relative;
+    left:45px;
+}
+
+.test-111{
+    &:active {
+        & > .fas {
+            transform: scale(1);
+        }
+    }
 }
 
 
@@ -184,8 +215,20 @@ button{
     right: 15px;
 }
 
+a {
+    color:#3d3d3d;
+    text-decoration: none;
+}
 
-
+button{
+    cursor: pointer;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 500ms;
+    &:hover {
+        transform:scale(1.10);
+    }
+}
 
 footer{
     background-color:#3d3d3d;
@@ -298,10 +341,6 @@ main {
     flex-direction: column;
 }
 
-section{
-    margin-top:40px;
-}
-
 .btn-purchase {
     display: flex;
     flex-direction: column;
@@ -310,4 +349,59 @@ section{
 .btn-purchase button{
     width:150px;
     align-self: center;
+}
+
+.restaurants__restaurant__image {
+    width:100%;
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+
+
+
+@media screen and (min-width:880px){
+    .steps-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .steps-menu section {
+        width:30%;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:1199px){
+    .restaurants__vignettes__restaurant {
+        width:49%;
+        float:left;
+    }
+    #restaurant-3{
+        clear:both;
+    }  
+    #restaurant-1, #restaurant-3{
+        margin-right:2%;
+    } 
+}
+
+@media screen and (min-width:1200px){
+    .steps {
+        flex-direction:row;
+        padding-left:5%;
+        padding-right:5%;
+    }
+    .steps__choice {
+        width:100%;
+        margin-left:50px; 
+        margin-right:50px;
+    }
+    .restaurants__vignettes {
+        display:flex;
+        flex-direction: row;
+        margin-left:5%;
+        margin-right:3%;
+    }
+    .restaurants__vignettes__restaurant {
+        margin-right:2%;
+    }
 }

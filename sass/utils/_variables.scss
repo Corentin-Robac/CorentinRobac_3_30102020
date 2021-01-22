@@ -7,7 +7,7 @@ $colour-background-tertiary:#EDEDED;
 $colour-background-footer:#3d3d3d;
 
 h1,h2,h3,h4,h5,h6{
-    font-family: 'Roboto';
+    font-family: 'robotoregular';
 }
 
 body, p{
@@ -85,12 +85,12 @@ button{
     }
 }
 
-.fas{
+.index #city_under_header .fas, .index .heart .fas{
     margin-left:20px;
     margin-right:20px;
 }
 
-.steps__choice .fas{
+.index .steps__choice .fas, .menu .top-menu .fas{
     margin-left: 0;
     color:grey;
 }
@@ -182,23 +182,40 @@ button{
     padding-top:5px;
     padding-right: 10px;
     font-size: 1.3em;
-    //position: relative;
-    //left:20px;
 }
 
-section .fas {
-    transform: scale(0);
+.index section .fas{
+    display:none;
     font-family: "Font Awesome 5 Free"; 
     font-weight: 800; 
     content: "\f004";
     position: relative;
-    left:45px;
+    left:20px;
 }
 
-.test-111{
-    &:active {
+.menu .top-menu .fas{
+    display:none;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 800; 
+    content: "\f004";
+    position: relative;
+    left:0;
+}
+
+.bckg_heart{
+    &:hover {
         & > .fas {
-            transform: scale(1);
+            display: block;
+            background: rgb(147,86,220);
+            background: linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            cursor:pointer;
+        }
+        & > .far {
+            display:none
         }
     }
 }
@@ -213,6 +230,80 @@ section .fas {
     position: absolute;
     top: 15px;
     right: 15px;
+}
+
+
+.loading__page{
+    background-color: rgb(255, 255, 255);
+    animation:loading-2 4000ms;
+    position: fixed;
+    left:35%;
+    top:50vh;
+    opacity: 0;
+}
+
+@keyframes loading-2 {
+    0% {
+        opacity: 1;
+    }
+    50%,100% {
+        opacity: 1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+.progress{
+    width:30vw;
+    height:20px;
+}
+
+
+.progress__bar{
+    background: rgb(147,86,220);
+    background: linear-gradient(90deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    width:inherit;
+    height:inherit;
+    transform-origin: 0% 50%;
+    transform: scaleX(0);
+    animation: progress-bar 4000ms;
+    border-radius: 50px;
+}
+
+@keyframes progress-bar {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    10% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    40%,100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.content__page{
+    opacity: 1;
+    animation: loading 5000ms;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0;
+    }
+    50%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
 }
 
 a {
@@ -268,7 +359,7 @@ footer img{
 
 .arrow-back{
     position: absolute;
-    left: 0;
+    left: 10px;
 }
 
 main {
@@ -287,7 +378,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 30px;
+
     padding-top: 20px;
 }
 
@@ -316,6 +407,7 @@ main {
     background-color: white;
     border-radius: 15px;
     justify-content: space-between;
+    overflow: hidden;
     -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
     -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
     box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
@@ -325,7 +417,164 @@ main {
     display: flex;
     flex-direction: column;
     margin: 15px;
-    width: 80%;
+}
+
+#meal-1{
+    opacity: 1;
+    animation: loading-meal-1 4000ms;
+}
+
+@keyframes loading-meal-1 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#meal-2{
+    opacity: 1;
+    animation: loading-meal-2 4200ms;
+}
+
+@keyframes loading-meal-2 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#meal-3{
+    opacity: 1;
+    animation: loading-meal-3 4400ms;
+}
+
+@keyframes loading-meal-3 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#meal-4{
+    opacity: 1;
+    animation: loading-meal-4 4600ms;
+}
+
+@keyframes loading-meal-4 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#meal-5{
+    opacity: 1;
+    animation: loading-meal-5 4800ms;
+}
+
+@keyframes loading-meal-5 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#meal-6{
+    opacity: 1;
+    animation: loading-meal-6 5000ms;
+}
+
+@keyframes loading-meal-6 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#meal-7{
+    opacity: 1;
+    animation: loading-meal-7 5200ms;
+}
+
+@keyframes loading-meal-7 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#meal-8{
+    opacity: 1;
+    animation: loading-meal-8 5400ms;
+}
+
+@keyframes loading-meal-8 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+#meal-9{
+    opacity: 1;
+    animation: loading-meal-9 5600ms;
+}
+
+@keyframes loading-meal-9 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.name-rest, .name-meal {
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .description{
@@ -335,10 +584,36 @@ main {
 }
 
 .tik{
-    width: 20%;
+    width:70px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: $colour-tertiary;
+    transform: translate(70px);
+    transform-origin: center right;
+    transition-duration: 500ms;
+}
+
+.tik .fas{
+    font-size: 1.5em;
+    color:white;
+    transform: rotate(-360deg);
+    transition: transform 500ms ease-in-out;
+}
+
+.box-meal{
+    &:hover{
+        & .tik{
+            transform: translate(0px);
+        }
+        & .fas{
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.tik p {
+    text-align: center;
 }
 
 .btn-purchase {
@@ -356,6 +631,11 @@ main {
     max-height: 100vh;
     object-fit: cover;
 }
+
+.name-meal, .name-rest{
+    text-overflow: ellipsis;
+}
+
 
 
 

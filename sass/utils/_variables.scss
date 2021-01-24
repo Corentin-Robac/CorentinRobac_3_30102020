@@ -577,6 +577,23 @@ main {
     }
 }
 
+#meal-10{
+    opacity: 1;
+    animation: loading-meal-9 5800ms;
+}
+
+@keyframes loading-meal-10 {
+    0% {
+        opacity: 0;
+    }
+    90%,100% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
 .name-rest, .name-meal {
     white-space: nowrap;
     overflow: hidden;

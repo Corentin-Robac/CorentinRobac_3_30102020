@@ -335,6 +335,11 @@ footer img {
   max-width: 300px;
 }
 
+@media screen and (min-width: 1200px) {
+  .restaurants__vignettes {
+    width: -moz-available;
+  }
+}
 .arrow-back {
   position: absolute;
   left: 10px;
@@ -394,6 +399,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 15px;
+  overflow: hidden;
 }
 
 #meal-1 {
@@ -557,8 +563,11 @@ main {
   justify-content: center;
   flex-direction: column;
   background-color: #99E2D0;
+  margin-left: 15px;
+}
+
+.trans-tik {
   transform: translate(70px);
-  transform-origin: center right;
   transition-duration: 500ms;
 }
 
@@ -569,11 +578,15 @@ main {
   transition: transform 500ms ease-in-out;
 }
 
-.box-meal:hover .tik {
+.box-meal:hover .trans-tik {
   transform: translate(0px);
 }
 .box-meal:hover .fas {
   transform: rotate(0deg);
+}
+
+.trans-tik {
+  display: flex;
 }
 
 .tik p {
@@ -598,6 +611,12 @@ main {
 
 .name-meal, .name-rest {
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 880px) {

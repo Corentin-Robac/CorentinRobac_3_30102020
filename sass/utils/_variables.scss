@@ -352,7 +352,11 @@ footer img{
     max-width: 300px;
 }
 
-
+@media screen and (min-width: 1200px) {
+    .restaurants__vignettes {
+    width: -moz-available;
+    }
+    }
 
 //Menu
 
@@ -417,6 +421,7 @@ main {
     display: flex;
     flex-direction: column;
     margin: 15px;
+    overflow: hidden;
 }
 
 #meal-1{
@@ -589,8 +594,11 @@ main {
     justify-content: center;
     flex-direction: column;
     background-color: $colour-tertiary;
+    margin-left: 15px;
+}
+
+.trans-tik{
     transform: translate(70px);
-    transform-origin: center right;
     transition-duration: 500ms;
 }
 
@@ -603,13 +611,17 @@ main {
 
 .box-meal{
     &:hover{
-        & .tik{
+        & .trans-tik{
             transform: translate(0px);
-        }
+        } 
         & .fas{
             transform: rotate(0deg);
         }
     }
+}
+
+.trans-tik{
+    display: flex;
 }
 
 .tik p {
@@ -634,9 +646,13 @@ main {
 
 .name-meal, .name-rest{
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-
+.price{
+    display: flex;
+    align-items:center;
+}
 
 
 

@@ -1,0 +1,18 @@
+header{
+    background-color: $colour-background-primary;
+    display: flex;
+    justify-content: center;
+    -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
+    box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.10);
+    position: relative;
+    align-items: center;
+}
+
+#logo_header{
+    width:50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 300px;
+    justify-self: center;
+}

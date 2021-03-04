@@ -9,9 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Corentin-Robac/CorentinRobac_3_30102020"
+    "url": "git+https://github.com/Corentin-Robac/CorentinRobac_3_30102020.git"
   },
   "author": "CorentinRobac",
   "license": "ISC",
-  "browserslist": "last 4 versions"
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Corentin-Robac/CorentinRobac_3_30102020/issues"
+  },
+  "homepage": "https://github.com/Corentin-Robac/CorentinRobac_3_30102020#readme",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
 }

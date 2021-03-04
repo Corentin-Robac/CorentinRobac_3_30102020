@@ -71,6 +71,10 @@ body, p {
   background-color: #9256dc17;
 }
 
+.steps__choice:hover .fas {
+  color: #9356DC !important;
+}
+
 #operation {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -87,7 +91,6 @@ body, p {
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .restaurants__vignettes {
   margin-left: 5%;
@@ -144,6 +147,10 @@ body, p {
   display: inline-block;
 }
 
+.steps__choice .fas {
+  margin-right: 10px;
+}
+
 .heart {
   padding-top: 5px;
   padding-right: 10px;
@@ -151,10 +158,14 @@ body, p {
 }
 
 .index section .fas {
-  display: none;
   font-family: "Font Awesome 5 Free";
   font-weight: 800;
   content: "";
+  position: relative;
+}
+
+.index .heart .fas {
+  display: none;
   position: relative;
   left: 20px;
 }
@@ -170,8 +181,8 @@ body, p {
 
 .bckg_heart:hover > .fas {
   display: block;
-  background: #9356dc;
-  background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
+  background: #9356DC;
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -219,8 +230,8 @@ body, p {
 }
 
 .progress__bar {
-  background: #9356dc;
-  background: linear-gradient(90deg, #9356dc 0%, #ff79da 100%);
+  background: #9356DC;
+  background: linear-gradient(90deg, #9356DC 0%, #FF79DA 100%);
   width: inherit;
   height: inherit;
   transform-origin: 0% 50%;
@@ -353,7 +364,7 @@ main {
 .box-meal {
   display: flex;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 15px;
   justify-content: space-between;
   overflow: hidden;

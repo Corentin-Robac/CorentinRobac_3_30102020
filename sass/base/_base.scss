@@ -1,3 +1,5 @@
+//debut font
+
 $ff-base: 'Roboto', sans-serif;
 $ff-alt: 'Shrikhand', cursive;
 
@@ -10,13 +12,15 @@ h1,h2,h3,h4,h5,h6,p,a{
     font-size: 20pt;
 }
 
+//fin font
+
 body, p{
     margin:0;
     padding:0;
 }
 
 #city_under_header{
-    background-color: $colour-background-tertiary;
+    background-color: $colour-background-tertiary;//variable gris
     padding:10px;
     text-align: center;
 }
@@ -34,7 +38,7 @@ body, p{
     padding-right: 10%;
 }
 
-.steps{
+.steps{//partie fonctionnement
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,6 +75,10 @@ body, p{
     }
 }
 
+.steps__choice:hover .fas {
+        color: $colour-primary!important;
+}
+
 #operation{
     padding-top:40px;
     padding-bottom:40px;
@@ -81,13 +89,12 @@ body, p{
     align-self: flex-start;
 }
 
-.restaurants{
+.restaurants{//partie restaurants
     background-color: $colour-background-secondary;
     padding-top:40px;
     padding-bottom:40px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     &__vignettes{
         margin-left:5%;
         margin-right: 5%;
@@ -123,7 +130,7 @@ body, p{
     }
 }
 
-.txt-gras{
+.txt-gras{ //stylisé certains text en gras
     font-weight: bold;
 }
 
@@ -131,7 +138,7 @@ body, p{
     margin-left:-15px;
 }
 
-.number{
+.number{//numero de la partie fonctionnement
     padding: 5px;
     width: 15px;
     height: 15px;
@@ -144,6 +151,10 @@ body, p{
     display: inline-block;
 }
 
+.steps__choice .fas{
+    margin-right: 10px;
+}
+
 .heart{
     padding-top:5px;
     padding-right: 10px;
@@ -151,10 +162,14 @@ body, p{
 }
 
 .index section .fas{
-    display:none;
     font-family: "Font Awesome 5 Free"; 
     font-weight: 800; 
     content: "\f004";
+    position: relative;
+}
+
+.index .heart .fas{
+    display: none;
     position: relative;
     left:20px;
 }
@@ -168,12 +183,12 @@ body, p{
     left:0;
 }
 
-.bckg_heart{
+.bckg_heart{//coeur
     &:hover {
         & > .fas {
             display: block;
-            background: rgb(147,86,220);
-            background: linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+            background: $colour-primary;
+            background: linear-gradient(180deg, $colour-primary 0%, $colour-secondary 100%);//dégradé
             -webkit-background-clip: text;
             -moz-background-clip: text;
             background-clip: text;
@@ -197,7 +212,7 @@ body, p{
     right: 15px;
 }
 
-.loading__page{
+.loading__page{//chargement de la page
     background-color: rgb(255, 255, 255);
     animation:loading-2 4000ms;
     position: fixed;
@@ -206,7 +221,7 @@ body, p{
     opacity: 0;
 }
 
-@keyframes loading-2 {
+@keyframes loading-2 {//apparition/disparition loader
     0% {
         opacity: 1;
     }
@@ -218,14 +233,14 @@ body, p{
     }
 }
 
-.progress{
+.progress{//barre de progression interne
     width:30vw;
     height:20px;
 }
 
-.progress__bar{
-    background: rgb(147,86,220);
-    background: linear-gradient(90deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+.progress__bar{//barre de progression conteneur
+    background: $colour-primary;
+    background: linear-gradient(90deg, $colour-primary 0%, $colour-secondary 100%);
     width:inherit;
     height:inherit;
     transform-origin: 0% 50%;
@@ -234,7 +249,7 @@ body, p{
     border-radius: 50px;
 }
 
-@keyframes progress-bar {
+@keyframes progress-bar {//animation du loader
     0% {
         transform: scaleX(0);
         opacity: 0;
@@ -252,12 +267,12 @@ body, p{
     }
 }
 
-.content__page{
+.content__page{//contenu de la page en dehors du loader
     opacity: 1;
     animation: loading 5000ms;
 }
 
-@keyframes loading {
+@keyframes loading {//apparition du contenu de la page
     0% {
         opacity: 0;
     }
@@ -273,6 +288,8 @@ a {
     color:#3d3d3d;
     text-decoration: none;
 }
+
+//debut footer
 
 footer{
     background-color:#3d3d3d;
@@ -305,15 +322,17 @@ footer img{
     max-width: 300px;
 }
 
+//fin footer
+
 @media screen and (min-width: 1200px) {
     .restaurants__vignettes {
     width: -moz-available;
     }
 }
 
-//Menu
+//pages des Menus
 
-.arrow-back{
+.arrow-back{//retour en arrière
     position: absolute;
     left: 10px;
 }
@@ -357,10 +376,10 @@ main {
     padding-bottom:4px;
 }
 
-.box-meal{
+.box-meal{//bloc contenant nop du plat et prix
     display: flex;
     margin-bottom: 20px;
-    background-color: white;
+    background-color: $colour-background-primary;
     border-radius: 15px;
     justify-content: space-between;
     overflow: hidden;
@@ -369,12 +388,14 @@ main {
     box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.10);
 }
 
-.meal{
+.meal{//texte des plats
     display: flex;
     flex-direction: column;
     margin: 15px;
     overflow: hidden;
 }
+
+//debut des plats avec animations
 
 #meal-1{
     opacity: 1;
@@ -546,6 +567,8 @@ main {
     }
 }
 
+//fin des plats avec animations
+
 .name-rest, .name-meal {
     white-space: nowrap;
     overflow: hidden;
@@ -557,7 +580,7 @@ main {
     margin-top:5px;
 }
 
-.tik{
+.tik{//coche de validation
     width:70px;
     display: flex;
     justify-content: center;
@@ -619,6 +642,8 @@ main {
     margin-bottom: 15px;
 }
 
+//debut breakpoints responsive
+
 @media screen and (max-width:450px){
     .restaurants__restaurant__image{
         max-height: 300px;
@@ -670,3 +695,5 @@ main {
         margin-right:2%;
     }
 }
+
+//fin breakpoints responsive
